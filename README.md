@@ -4,7 +4,7 @@
 ![Platform](https://img.shields.io/badge/platforms-iOS%208.0+-333333.svg)
 ![Swift](https://img.shields.io/badge/Swift-4.2-orange.svg)
 
-DXScaleFlowLayout is a subclass of the UICollectionViewFlowLayout allowing the display of scale  cells in a UICollectionView.
+DXScaleFlowLayout is a subclass of the UICollectionViewFlowLayout allowing the display of scale up/down cells in a UICollectionView.
 
 ![Demo](https://github.com/SiriDx/DXScaleFlowLayout/blob/master/Resources/scaleflowlayout.gif)
 
