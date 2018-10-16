@@ -30,7 +30,7 @@ extension UICollectionView {
 
 open class DXScaleFlowLayout: UICollectionViewFlowLayout {
     
-    open var isPagingEnabled: Bool = false
+    open var isPagingEnabled: Bool = true
     open var transformScale: CGFloat = 1
     
     private var isFirstLayout:Bool = true
