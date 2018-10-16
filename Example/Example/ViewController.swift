@@ -29,26 +29,61 @@ class ViewController: UIViewController {
         
         view.backgroundColor = UIColor.white
         
-        setupLayout()
-        setupCollectionView()
+//        setupHorizontalExpamle()
         
-        collectionView.scaleScroll(toIndex: 2)
+        setupVerticalExpamle()
     }
     
-    func setupLayout() {
+    func setupVerticalExpamle() {
+        // ScaleFlowLayout
+        let layout = DXScaleFlowLayout()
+        self.scaleLayout = layout
+        layout.isPagingEnabled = true
+        layout.transformScale = (300 - 250) / 300.0
+        layout.minimumInteritemSpacing = 10
+        layout.scrollDirection = .vertical
+        
+        let itemWH:CGFloat = 200
+        
+        layout.itemSize = CGSize(width: itemWH, height: itemWH)
+        
+        // CollectionView
+        let kScreenW = UIScreen.main.bounds.size.width
+        let kScreenH = UIScreen.main.bounds.size.height
+        
+        let clvX = (kScreenW - itemWH) * 0.5
+        let clvW = itemWH + 20
+        let rect = CGRect(x: clvX, y: 70, width: 250, height: kScreenH)
+        
+        let collectionView = UICollectionView(frame: rect, collectionViewLayout: scaleLayout)
+        self.collectionView = collectionView
+        collectionView.showsHorizontalScrollIndicator = false
+        
+        self.collectionView = collectionView
+        view.addSubview(collectionView)
+        collectionView.backgroundColor = UIColor.white
+        
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        
+        collectionView.register(ExampleCell.self, forCellWithReuseIdentifier: "cell")
+    }
+    
+    func setupHorizontalExpamle() {
+        
+        // ScaleFlowLayout
         let layout = DXScaleFlowLayout()
         self.scaleLayout = layout
         layout.isPagingEnabled = true
         layout.transformScale = (300 - 250) / 300.0
         layout.minimumLineSpacing = 10
+        layout.scrollDirection = .horizontal
         
         let itemW:CGFloat = 570 * 0.5 + 20
         let itemH:CGFloat = (388.0 / 706.0) * itemW
         layout.itemSize = CGSize(width: itemW, height: itemH)
-    }
-    
-    func setupCollectionView() {
         
+        // CollectionView
         let kScreenW = UIScreen.main.bounds.size.width
         let kScreenH = UIScreen.main.bounds.size.height
         

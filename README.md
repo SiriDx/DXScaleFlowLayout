@@ -13,7 +13,6 @@ DXScaleFlowLayout is a subclass of the UICollectionViewFlowLayout allowing the d
 3. [Usage](#usage)
 - [Basics](#basics)
 - [Property](#property)
-- [Function](#Function)
 
 ## Requirements
 
@@ -70,12 +69,6 @@ open var transformScale: CGFloat
 
 ```swift
 open var isPagingEnabled: Bool = true
-```
-
-#### Function
-
-```swift
-func scaleScroll(toIndex index:Int, animated:Bool = false)
 ```
 
 
