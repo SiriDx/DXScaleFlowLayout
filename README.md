@@ -37,11 +37,7 @@ end
 
 #### Manually (iOS 7+)
 
-To use this library in your project manually you may:  
-
-1. for Projects, just drag DXScaleFlowLayout.swift to the project tree
-2. for Workspaces, include the whole DXScaleFlowLayout.xcodeproj
-
+To use this library in your project manually, you may drag DXScaleFlowLayout.swift to the project tree
 
 ## Usage
 
