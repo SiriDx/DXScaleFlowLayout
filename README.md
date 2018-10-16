@@ -6,6 +6,8 @@
 
 DXScaleFlowLayout is a subclass of the UICollectionViewFlowLayout allowing the display of scaleable cells in a UICollectionView.
 
+![Demo](https://github.com/SiriDx/DXScaleFlowLayout/blob/master/Resources/scaleflowlayout.gif)
+
 1. [Requirements](#requirements)
 2. [Integration](#integration)
 3. [Usage](#usage)
