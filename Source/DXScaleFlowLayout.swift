@@ -135,7 +135,13 @@ open class DXScaleFlowLayout: UICollectionViewFlowLayout {
                     }
                 }
                 
-                let newProposedContentOffsetX = proposedContentOffset.x + adjustOffsetX
+                var newProposedContentOffsetX = proposedContentOffset.x + adjustOffsetX
+                
+                let maxOffsetX = collectionView.contentSize.width - collectionView.frame.size.width + collectionView.contentInset.left
+                
+                if newProposedContentOffsetX > maxOffsetX {
+                    newProposedContentOffsetX = maxOffsetX
+                }
                 
                 return CGPoint(x: newProposedContentOffsetX, y: proposedContentOffset.y)
             }
