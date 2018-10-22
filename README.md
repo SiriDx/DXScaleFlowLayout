@@ -16,7 +16,7 @@ DXScaleFlowLayout is a subclass of the UICollectionViewFlowLayout allowing the d
 
 ## Requirements
 
-- iOS 8.0+
+- iOS 9.0+
 - Xcode 8
 
 ## Integration
