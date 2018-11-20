@@ -67,14 +67,14 @@ open var transformScale: CGFloat
 
 - **minimumAlpha**:
 
-```
+```swift
 open var minimumAlpha: CGFloat
 ```
 
 - **isPagingEnabled**:
 
 ```swift
-open var isPagingEnabled: Bool = true
+open var isPagingEnabled: Bool
 ```
 
 
