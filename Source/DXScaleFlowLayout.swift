@@ -34,6 +34,7 @@ open class DXScaleFlowLayout: UICollectionViewFlowLayout {
     
     open var isPagingEnabled: Bool = true
     open var transformScale: CGFloat = 1
+    open var minimumAlpha: CGFloat = 1
     
     private var isFirstLayout:Bool = true
     
@@ -46,6 +47,10 @@ open class DXScaleFlowLayout: UICollectionViewFlowLayout {
     }
     
     private func resetLayout() {
+        
+        if minimumAlpha > 1 || minimumAlpha < 0 {
+            minimumAlpha = 1
+        }
         
         scrollDirection = .horizontal
         minimumInteritemSpacing = 0
@@ -97,8 +102,10 @@ open class DXScaleFlowLayout: UICollectionViewFlowLayout {
                     
                     let scale = (newW + offsetW) / itemSize.width
                     
-                    attribute.transform = CGAffineTransform.init(scaleX: scale, y: scale)
+                    attribute.alpha = minimumAlpha + ((1 - minimumAlpha) / totalDistance) * (totalDistance - distance)
                     
+                    attribute.transform = CGAffineTransform.init(scaleX: scale, y: scale)
+                    attribute.zIndex = Int(scale * 10)
                 }
                 
                 return attribute

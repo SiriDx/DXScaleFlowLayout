@@ -39,7 +39,8 @@ class ViewController: UIViewController {
         self.scaleLayout = layout
         layout.isPagingEnabled = true
         layout.transformScale = (300 - 250) / 300.0
-        layout.minimumLineSpacing = 10
+        layout.minimumLineSpacing = -50
+        layout.minimumAlpha = 0.6
         
         let itemW:CGFloat = 570 * 0.5 + 20
         let itemH:CGFloat = (388.0 / 706.0) * itemW
