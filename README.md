@@ -65,6 +65,12 @@ UICollectionView(frame: .zero, collectionViewLayout: scaleLayout)
 open var transformScale: CGFloat
 ```
 
+- **minimumAlpha**:
+
+```
+open var minimumAlpha: CGFloat
+```
+
 - **isPagingEnabled**:
 
 ```swift
