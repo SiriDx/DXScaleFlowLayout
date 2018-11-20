@@ -85,6 +85,8 @@ open class DXScaleFlowLayout: UICollectionViewFlowLayout {
             
             let newAttributes = copyAttributes.map { (attribute) -> UICollectionViewLayoutAttributes in
                 
+                attribute.transform = CGAffineTransform.init(scaleX: 0, y: 0)
+                
                 if visibleRect.intersects(attribute.frame) {
                     
                     let contentOffsetX = collectionView.contentOffset.x

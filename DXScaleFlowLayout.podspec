@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name        = "DXScaleFlowLayout"
-s.version     = "1.0.2"
+s.version     = "1.0.4"
 s.summary     = "Custom collectionView layout that display scaled up/down cells"
 s.homepage    = "https://github.com/SiriDx/DXScaleFlowLayout"
 s.license     = { :type => "MIT" }
